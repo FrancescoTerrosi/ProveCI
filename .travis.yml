@@ -1,5 +1,9 @@
 language: java
 
+jdk:
+- oraclejdk8
+- oraclejdk9
+- openjdk7
 
 # useless comment
 
@@ -7,10 +11,10 @@ matrix:
     fast_finish: true
 
 include:
-- oraclejdk8
+- jdk: oraclejdk8
   env: WITH_COVERALLS=true
-- oraclejdk9
-- openjdk7
+- jdk: oraclejdk9
+- jdk: openjdk7
 
 # skip installation step
 install: true
