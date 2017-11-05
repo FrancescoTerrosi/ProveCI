@@ -17,6 +17,22 @@
 		<jacoco.report.path>${project.reporting.outputDirectory}/jacoco-ut</jacoco.report.path>
 	</properties>
 
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6
+					</source>
+					<target>1.6
+					</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<profiles>
 		<profile>
 			<id>jacoco</id>
@@ -24,12 +40,9 @@
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<build>
-
-
-
 				<pluginManagement>
 					<plugins>
-						
+
 						<plugin>
 							<groupId>org.eluder.coveralls</groupId>
 							<artifactId>coveralls-maven-plugin</artifactId>
@@ -38,14 +51,6 @@
 								<jacocoReports>
 									<jacocoReport>${jacoco.report.path}/jacoco.xml</jacocoReport>
 								</jacocoReports>
-							</configuration>
-						</plugin>
-						<plugin>
-							<artifactId>maven-compiler-plugin</artifactId>
-							<version>3.1</version>
-							<configuration>
-								<source>1.6</source>
-								<target>1.6</target>
 							</configuration>
 						</plugin>
 					</plugins>
