@@ -7,6 +7,6 @@ package com.example.proveCI;
 public class App 
 {
     public String hello() {
-    	return "HelloWorld!";
+    	return "HulloWorld!";
     }
 }
