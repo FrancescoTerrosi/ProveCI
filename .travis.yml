@@ -3,5 +3,9 @@ language: java
 # skip installation step
 install: true
 
+cache:
+  directories:
+  - $HOME/.m2s
+
 script:
 - mvn -f com.example.proveCI/pom.xml clean verify
