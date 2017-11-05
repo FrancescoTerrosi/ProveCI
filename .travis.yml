@@ -5,7 +5,7 @@ install: true
 
 cache:
   directories:
-  - $HOME/.m2s
+  - $HOME/.m2
 
 script:
 - mvn -f com.example.proveCI/pom.xml clean verify -Pjacoco coveralls:report
