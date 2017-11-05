@@ -4,4 +4,4 @@ language: java
 install: true
 
 script:
-- mvn -f com.examples.proveCI/pom.xml clean verify
+- mvn -f com.example.proveCI/pom.xml clean verify
