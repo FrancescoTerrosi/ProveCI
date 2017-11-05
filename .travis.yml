@@ -1,7 +1,11 @@
 language: java
 
-jdk:
+matrix:
+    fast_finish: true
+
+include:
 - oraclejdk8
+  env: WITH_COVERALLS = true
 - oraclejdk9
 - openjdk7
 
@@ -13,4 +17,9 @@ cache:
   - $HOME/.m2
 
 script:
-- mvn -f com.example.proveCI/pom.xml clean verify -Pjacoco coveralls:report
+- if [ "$WITH_COVERALL" == "true" ];
+  then
+	mvn -f com.example.proveCI/pom.xml clean verify -Pjacoco coveralls:report;
+  else
+		mvn -f com.example.proveCI/pom.xml clean verify;
+  fi
