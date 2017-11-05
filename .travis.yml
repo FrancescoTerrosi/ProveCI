@@ -24,10 +24,9 @@ cache:
   - $HOME/.m2
 
 script:
-
-- if [ "$WITH_COVERALL"=="true" ];
-  then
-	mvn -f com.example.proveCI/pom.xml clean verify -Pjacoco coveralls:report;
-  else
-	mvn -f com.example.proveCI/pom.xml clean verify;
-  fi
+ - if [ "$WITH_COVERALLS" == "true" ];
+   then
+     mvn -f com.examples.myproject/pom.xml clean verify -Pjacoco coveralls:report;
+   else
+     mvn -f com.examples.myproject/pom.xml clean verify;
+   fi
