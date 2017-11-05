@@ -8,4 +8,4 @@ cache:
   - $HOME/.m2s
 
 script:
-- mvn -f com.example.proveCI/pom.xml clean verify
+- mvn -f com.example.proveCI/pom.xml clean verify -Pjacoco coveralls:report
