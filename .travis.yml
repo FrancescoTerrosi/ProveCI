@@ -5,6 +5,8 @@ jdk:
 - oraclejdk9
 - openjdk7
 
+# useless comment
+
 matrix:
     fast_finish: true
 
